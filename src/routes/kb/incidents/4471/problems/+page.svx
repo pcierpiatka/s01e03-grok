@@ -4,13 +4,13 @@ title: '#4471 · the problems the table shows'
 owner: pawel
 status: filed
 reviewed: 2026-11-05
-signature: "v1.eyJzdWIiOiI4NjU3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM4OTYxMzMsImV4cCI6MTc5Mzk4MjUzM30.gEVYms52XxEaZeNF0spGXH9iBoyytkA_qKJh2f1cDIA"
+signature: "v1.eyJzdWIiOiI4NjU3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM4OTcwMDIsImV4cCI6MTc5Mzk4MzQwMn0.nE2EkMt1onvA5NwpAHIE5AhZvkuKUHC1km1YcV4D7X4"
 ---
 
 <script>
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
   import ProblemTable from '#lib/kb/ProblemTable.svelte';
-  const signature = "v1.eyJzdWIiOiI4NjU3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM4OTYxMzMsImV4cCI6MTc5Mzk4MjUzM30.gEVYms52XxEaZeNF0spGXH9iBoyytkA_qKJh2f1cDIA";
+  const signature = "v1.eyJzdWIiOiI4NjU3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM4OTcwMDIsImV4cCI6MTc5Mzk4MzQwMn0.nE2EkMt1onvA5NwpAHIE5AhZvkuKUHC1km1YcV4D7X4";
 </script>
 
 The incident page calls #4471 one issue with one fix queued. The table on that page is the desk's count. This page files one ticket per cause row. The one-day footnote is the same problem as the parser row, so it has no ticket of its own. The numbers below are read from the count file. They are not typed here.
