@@ -16,8 +16,8 @@ SNAPSHOT = ROOT / "analysis" / "snapshot-ids.txt"
 TITLES = {
     "parser": "parser: shared date parser reads day-first tenants month first",
     "hint": "hint: booking-v3 tells day-first tenants to type month first",
-    "one-day": "one-day move: footnoted under parser",
 }
+FOOTNOTE = "one-day"
 
 
 def rendered_view(html: str) -> dict[str, int]:
@@ -45,7 +45,7 @@ def load_ids(name: str) -> list[str]:
 
 def main() -> None:
     view = rendered_view(DESK.read_text())
-    lists = {name: load_ids(name) for name in TITLES}
+    lists = {name: load_ids(name) for name in (*TITLES, FOOTNOTE)}
     known = set(SNAPSHOT.read_text().split())
     for name, ids in lists.items():
         missing = [i for i in ids if i not in known]
@@ -53,7 +53,7 @@ def main() -> None:
             sys.exit(f"{name} has ids missing from the snapshot: {missing[:5]}")
         if len(ids) != view[name]:
             sys.exit(f"{name} list is {len(ids)}; the rendered kb view shows {view[name]}")
-    parser, hint, one_day = set(lists["parser"]), set(lists["hint"]), set(lists["one-day"])
+    parser, hint, one_day = set(lists["parser"]), set(lists["hint"]), set(lists[FOOTNOTE])
     if parser & hint:
         sys.exit("parser and hint overlap")
     if parser | hint != known:
@@ -68,12 +68,11 @@ def main() -> None:
         "one-day": "the footnote under the rendered #4471 cause table",
     }
     notes = {
-        "parser": "This row is the cause the table files as #4471. The one-day footnote is inside this count.",
+        "parser": "This row is the cause the table files as #4471. The one-day footnote is the same problem, counted inside this row.",
         "hint": "This row says: not this ticket — no ticket of its own.",
-        "one-day": "These ids are also in the parser list. The footnote says they are filed under parser.",
     }
     ISSUES.mkdir(parents=True, exist_ok=True)
-    for name, ids in lists.items():
+    for name, ids in ((name, lists[name]) for name in TITLES):
         n = len(ids)
         title = f"{TITLES[name]} ({n} reports)"
         body = "\n".join([

@@ -13,11 +13,11 @@ signature: "v1.eyJzdWIiOiI4NjU3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpY
   const signature = "v1.eyJzdWIiOiI4NjU3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM4OTYxMzMsImV4cCI6MTc5Mzk4MjUzM30.gEVYms52XxEaZeNF0spGXH9iBoyytkA_qKJh2f1cDIA";
 </script>
 
-The incident page calls #4471 one issue with one fix queued. The table on that page is the desk's count. This page files one ticket per row the table shows, including the footnote. The numbers below are read from the count file. They are not typed here.
+The incident page calls #4471 one issue with one fix queued. The table on that page is the desk's count. This page files one ticket per cause row. The one-day footnote is the same problem as the parser row, so it has no ticket of its own. The numbers below are read from the count file. They are not typed here.
 
 <ProblemTable />
 
-The one-day row is a subset of the parser row. Both tickets stay, and the overlap is the footnote's own words: filed under parser.
+The footnote's reports stay inside the parser ticket. The footnote says they are filed under parser.
 
 ## Bodies that do not match the cause
 
