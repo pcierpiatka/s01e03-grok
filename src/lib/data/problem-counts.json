@@ -1,0 +1,28 @@
+{
+  "problems": [
+    {
+      "id": "parser",
+      "title": "parser: shared date parser reads day-first tenants month first (379 reports)",
+      "reports": 379,
+      "where": "the rendered #4471 cause table, row parser, column reports",
+      "note": "This row is the cause the table files as #4471. The one-day footnote is inside this count.",
+      "ids": "analysis/ids/parser.txt"
+    },
+    {
+      "id": "hint",
+      "title": "hint: booking-v3 tells day-first tenants to type month first (33 reports)",
+      "reports": 33,
+      "where": "the rendered #4471 cause table, row hint, column reports",
+      "note": "This row says: not this ticket \u2014 no ticket of its own.",
+      "ids": "analysis/ids/hint.txt"
+    },
+    {
+      "id": "one-day",
+      "title": "one-day move: footnoted under parser (5 reports)",
+      "reports": 5,
+      "where": "the footnote under the rendered #4471 cause table",
+      "note": "These ids are also in the parser list. The footnote says they are filed under parser.",
+      "ids": "analysis/ids/one-day.txt"
+    }
+  ]
+}

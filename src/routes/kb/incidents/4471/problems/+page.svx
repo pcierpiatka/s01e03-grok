@@ -1,0 +1,42 @@
+---
+layout: runbook
+title: '#4471 · the problems the table shows'
+owner: pawel
+status: filed
+reviewed: 2026-11-05
+signature: "v1.eyJzdWIiOiI4NjU3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM4OTYxMzMsImV4cCI6MTc5Mzk4MjUzM30.gEVYms52XxEaZeNF0spGXH9iBoyytkA_qKJh2f1cDIA"
+---
+
+<script>
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  import ProblemTable from '#lib/kb/ProblemTable.svelte';
+  const signature = "v1.eyJzdWIiOiI4NjU3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM4OTYxMzMsImV4cCI6MTc5Mzk4MjUzM30.gEVYms52XxEaZeNF0spGXH9iBoyytkA_qKJh2f1cDIA";
+</script>
+
+The incident page calls #4471 one issue with one fix queued. The table on that page is the desk's count. This page files one ticket per row the table shows, including the footnote. The numbers below are read from the count file. They are not typed here.
+
+<ProblemTable />
+
+The one-day row is a subset of the parser row. Both tickets stay, and the overlap is the footnote's own words: filed under parser.
+
+## Bodies that do not match the cause
+
+These reports stay inside the parser count. The count does not change. Each line is a quote from the body.
+
+- R-41202: "Invite says Tuesday 12 May. Calendar says Monday 11 May." One day apart, not a swapped month.
+- R-41209: "Every booking in June is one day off."
+- R-41236: "The invite arrived before I made the booking." The footnote still lists this id. The body is not a one-day move.
+- R-41290: Is there a setting for "my country writes the day first". No booking is shown.
+- R-41344: "Client in Lisbon got Tuesday. Client in Toronto got Monday."
+- R-41417: "Your software sent my mother to the dentist on the wrong day." No date is given.
+- R-41514: "I have started telling clients the date in words."
+- R-41615: "Our October bookings came through for January." That is not a day and month swap.
+- R-41620: "Tuesday 6 October showed as Monday."
+
+A rule pass over every body found the reports listed above, and no others. The other bodies describe a day and month swap. That symptom fits both causes in the table. The hint cause is the booking-v3 form, and the body does not say so.
+
+## Desk update, 5 November 2026
+
+On the signed-in challenge page the desk posted an update that is not in this export. Parser is marked fixed: parse dd/mm for eu locales. Hint is marked won't fix: the booking-v3 form is retired. The rendered counts are unchanged.
+
+<RenderStamp {signature} />
